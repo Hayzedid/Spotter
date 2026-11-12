@@ -1,0 +1,22 @@
+# Render Blueprint for the Django API. The React frontend is deployed separately
+# to Netlify or Vercel (see frontend/netlify.toml / frontend/vercel.json).
+services:
+  - type: web
+    name: spotter-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate --noinput
+    startCommand: gunicorn spotter.wsgi:application --workers 2 --threads 4 --timeout 90
+    healthCheckPath: /api/health/
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ORS_API_KEY
+        sync: false          # paste your OpenRouteService key in the Render dashboard
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false          # e.g. https://your-site.netlify.app

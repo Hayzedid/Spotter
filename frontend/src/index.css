@@ -1,0 +1,28 @@
+:root {
+  /* Teal theme */
+  --bg-deep: #071e24;
+  --bg-panel: #0b2a30;
+  --bg-sunken: #051519;
+  --border: #1d4a52;
+  --border-soft: #12343b;
+  --text-muted: #93b4b6;
+  --text-subtle: #6a8e91;
+  --text-soft: #cfe3e3;
+  --text: #e3f0f0;
+  --text-strong: #f8fafc;
+  --accent: #2dd4bf;
+  --accent-strong: #0f766e;   /* buttons: white text stays readable (5.4:1) */
+  --accent-hover: #115e59;
+  --accent-light: #5eead4;
+  --accent-bg: #134e4a;
+  --notice-text: #ccfbf1;
+
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg-deep);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
