@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react'
-import { Clock, Info, Loader2, MapPinned, Route, Truck } from 'lucide-react'
+import { Clock, Info, Loader2, MapPinned, Route } from 'lucide-react'
+import BrandMark from './components/BrandMark'
 import InputForm, { defaultTrip } from './components/InputForm'
 import Modal from './components/Modal'
 import RouteMap from './components/RouteMap'
@@ -58,7 +59,7 @@ function App() {
     <div className="app">
       <header className="app-header">
         <div className="brand">
-          <div className="brand-icon"><Truck size={20} /></div>
+          <div className="brand-icon"><BrandMark size={22} /></div>
           <div>
             <h1>Spotter Weather-Aware Truck Routing</h1>
             <span className="brand-subtitle">Compare routes by weather risk, load weight and travel time</span>
