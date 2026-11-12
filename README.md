@@ -2,8 +2,9 @@
 
 A Django + React app that helps a truck driver choose the safest route. It compares three truck routes against the weather forecast at the time the truck reaches each checkpoint, applies the load-weight wind rules, and recommends a route by balancing weather risk and travel time.
 
-- **Live app:** _add the hosted URL here_
-- **Walkthrough (Loom):** _add the video link here_
+- **Live app:** https://spotter-one-ashy.vercel.app
+- **API:** https://spotter-ihwd.onrender.com/api/health/ (free tier: the first request after idle takes about 30 s to wake up)
+- **Walkthrough (Loom):** _link coming soon_
 
 ---
 
